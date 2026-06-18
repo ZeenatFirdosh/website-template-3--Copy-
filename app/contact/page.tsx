@@ -1,6 +1,7 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { PageHeader } from "@/components/sections/page-header";
+import { Toaster } from "@/components/ui/sonner";
 import { createPageMetadata, site } from "@/lib/site";
 
 export const metadata = createPageMetadata("contact", "/contact");
@@ -93,6 +94,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <Toaster />
     </main>
   );
 }

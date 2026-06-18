@@ -8,6 +8,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "@components/ui"],
+  },
 };
 
 export default withSentryConfig(withBundleAnalyzer(nextConfig), {

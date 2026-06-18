@@ -3,21 +3,19 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -74,12 +72,9 @@ export default function RootLayout({
       lang="en"
     >
       <body className="flex min-h-full flex-col">
-        <TooltipProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster />
-        </TooltipProvider>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
