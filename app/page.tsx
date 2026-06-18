@@ -7,12 +7,19 @@ import {
   TargetIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { CTA } from "@/components/sections/cta";
-import { FAQ } from "@/components/sections/faq";
 import { Features } from "@/components/sections/features";
 import { Hero } from "@/components/sections/hero";
 import { Stats } from "@/components/sections/stats";
-import { Testimonials } from "@/components/sections/testimonials";
+
+// Dynamically import heavy interactive components below the fold
+const Testimonials = dynamic(() =>
+  import("@/components/sections/testimonials").then((m) => m.Testimonials)
+);
+const FAQ = dynamic(() =>
+  import("@/components/sections/faq").then((m) => m.FAQ)
+);
 
 // DO NOT EDIT — update page content in lib/site.ts instead
 export const metadata: Metadata = {
