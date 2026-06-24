@@ -32,7 +32,7 @@
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
     "@lhci/cli": "^0.15.1",
-    "@next/bundle-analyzer": "^16.2.7",
+    "@next/bundle-analyzer": "^16.2.9",
     "@playwright/test": "^1.60.0",
     "@react-email/ui": "^6.5.0",
     "@tailwindcss/postcss": "^4.3.0",
